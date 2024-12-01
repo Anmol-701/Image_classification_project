@@ -4,7 +4,7 @@ import numpy as np  # Importing NumPy for numerical operations
 from PIL import Image  # Importing Image module from PIL library for image processing
 
 # Function to load the pre-trained model and cache it for optimized performance
-@st.cache(allow_output_mutation=True)
+@st.cache_data(allow_output_mutation=True)
 def load_model():
     model = tf.keras.models.load_model('flower_model_trained.hdf5')  # Loading the pre-trained model
     return model  # Returning the loaded model
